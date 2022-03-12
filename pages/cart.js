@@ -8,7 +8,7 @@ import EmptyCart from "../component/cartComponent/EmptyCart";
 import { CartContext } from "../context/CartContext";
 import styles from '../styles/Cart.module.css';
 
-const cart = () => {
+const Cart = () => {
 
     const { cartState } = useContext(CartContext);
     // console.log(cartState)
@@ -52,4 +52,4 @@ const cart = () => {
     );
 };
 
-export default cart;
+export default Cart;

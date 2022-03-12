@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import Image from 'next/image'
 import styles from '../styles/Single.module.css';
 import { CartContext } from '../context/CartContext';
 
@@ -32,12 +33,12 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const singleProductPage = ({ product }) => {
+const SingleProductPage = ({ product }) => {
 
     const [value, setValue] = useState(1);
     const [plusDisable, setPlusDisable] = useState(false);
     const [minusDisable, setMinusDisable] = useState(false);
-    const { cartState, dispatchCartAction } = useContext(CartContext);
+    const { dispatchCartAction } = useContext(CartContext);
 
     const handleMinus = () => {
         if (value === 0) {
@@ -65,6 +66,7 @@ const singleProductPage = ({ product }) => {
                 <Row>
                     <Col lg={4}>
                         <div className={styles.product_img_container}>
+                            {/* <Image src={product.img.src} layout="fill" alt={product.title} /> */}
                             <img src={product.img.src} alt={product.title} />
                         </div>
                     </Col>
@@ -133,4 +135,4 @@ const singleProductPage = ({ product }) => {
     );
 };
 
-export default singleProductPage;
+export default SingleProductPage;

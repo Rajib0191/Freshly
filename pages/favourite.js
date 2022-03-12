@@ -6,9 +6,10 @@ import Empty from "../component/favourite/Empty";
 import { CartContext } from "../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 
-const favourite = () => {
+const Favourite = () => {
     const { dispatchCartAction } = useContext(CartContext);
     const { favouriteState, dispatchFavouriteAction } = useContext(FavouriteContext);
     console.log(favouriteState);
@@ -44,6 +45,7 @@ const favourite = () => {
                                         <FontAwesomeIcon className={styles.itemCrossBar} icon={faXmark} onClick={() => removeFavouriteItem(item)} />
                                     </td>
                                     <td className={styles.favourite_image}>
+                                        {/* <Image src={item.img.src} width={50} height={50} alt={item.title} /> */}
                                         <img src={item.img.src} alt={item.title} />
                                     </td>
                                     <td>
@@ -65,4 +67,4 @@ const favourite = () => {
     );
 };
 
-export default favourite;
+export default Favourite;

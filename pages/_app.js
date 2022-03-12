@@ -6,13 +6,15 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CartProvider>
-      <FavouriteProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </FavouriteProvider>
-    </CartProvider>
+    <>
+      <CartProvider>
+        <FavouriteProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </FavouriteProvider>
+      </CartProvider>
+    </>
   )
 
 }
