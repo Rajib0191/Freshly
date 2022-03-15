@@ -45,8 +45,8 @@ const Favourite = () => {
                                         <FontAwesomeIcon className={styles.itemCrossBar} icon={faXmark} onClick={() => removeFavouriteItem(item)} />
                                     </td>
                                     <td className={styles.favourite_image}>
-                                        {/* <Image src={item.img.src} width={50} height={50} alt={item.title} /> */}
-                                        <img src={item.img.src} alt={item.title} />
+                                        <Image src={item.img.src} width={50} height={50} alt={item.title} />
+                                        {/* <img src={item.img.src} alt={item.title} /> */}
                                     </td>
                                     <td>
                                         <p className={styles.title}>{item.title}</p>

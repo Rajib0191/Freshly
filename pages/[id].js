@@ -66,14 +66,14 @@ const SingleProductPage = ({ product }) => {
                 <Row>
                     <Col lg={4}>
                         <div className={styles.product_img_container}>
-                            {/* <Image src={product.img.src} layout="fill" alt={product.title} /> */}
-                            <img src={product.img.src} alt={product.title} />
+                            <Image src={product?.img.src} layout="fill" alt={product?.title} />
+                            {/* <img src={product.img.src} alt={product.title} /> */}
                         </div>
                     </Col>
                     <Col lg={8}>
                         <div className={styles.product_details_container}>
-                            <h2>{product.title}</h2>
-                            <span>Price: ${product.price}</span>
+                            <h2>{product?.title}</h2>
+                            <span>Price: ${product?.price}</span>
                         </div>
                         {/*==================Buttons==================*/}
                         <div className={styles.product_details_quantity_container}>
